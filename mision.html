@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misión - Emily´s Trips</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Emily´s Trip</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="mision.html" class="active">Misión</a></li>
+                    <li><a href="vision.html">Visión</a></li>
+                    <li><a href="contacto.html">Contáctanos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="content-section">
+            <h2>Nuestra Misión</h2>
+            <p style="text-align: center; font-size: 1.2em; max-width: 800px; margin: 0 auto;">
+                "La misión es poder brindar servicios turísticos personalizados y accesibles, diseñando experiencias que permitan
+                a nuestros clientes conocer nuevos destinos y crear recuerdos inolvidables."
+            </p>
+
+            <div class="carousel">
+  <div class="slides fade">
+    <img src="https://i.pinimg.com/736x/e4/e9/89/e4e989eaf0f9a08f463baf3b92b93a92.jpg" alt="Atenas, Grecia.">
+  </div>
+  <div class="slides fade">
+    <img src="https://i.pinimg.com/736x/f2/99/fd/f299fd9e256b4566cb00864628b095b0.jpg" alt="Oaxaca, Mexico">
+  </div>
+  <div class="slides fade">
+    <img src="https://i.pinimg.com/736x/09/54/d0/0954d0bc3224769a386235a26bddea66.jpg" alt="Madrid, España">
+  </div>
+  <div class="slides fade">
+    <img src="https://i.pinimg.com/736x/df/3b/80/df3b80168c9b14b602eae4157202fce4.jpg" alt="Londres, Reino Unido">
+  </div>
+  <div class="slides fade">
+    <img src="https://i.pinimg.com/736x/c3/98/5f/c3985fb2fc99e393773879312aa1221a.jpg" alt="New York, Estados Unidos">
+  </div>
+
+  <!-- Controles -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- Puntos indicadores -->
+<div class="dots-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+
+<script>
+let slideIndex = 0;
+let slideTimer;
+
+function showSlides() {
+  const slides = document.getElementsByClassName("slides");
+  const dots = document.getElementsByClassName("dot");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1 }
+
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active-dot", "");
+  }
+
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active-dot";
+  slideTimer = setTimeout(showSlides, 4000); // cada 4 segundos
+}
+
+function plusSlides(n) {
+  clearTimeout(slideTimer);
+  slideIndex += n - 1;
+  showSlides();
+}
+
+function currentSlide(n) {
+  clearTimeout(slideTimer);
+  slideIndex = n - 1;
+  showSlides();
+}
+
+document.addEventListener("DOMContentLoaded", showSlides);
+</script>
+
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Emily´s Trips. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

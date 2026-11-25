@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios | Emily's Trips</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 25px;
+    }
+    .service-card, .package-card {
+      border: 1px solid #D6EAF8;
+      border-radius: 10px;
+      padding: 22px;
+      background: #FFF8ED;
+    }
+    .service-card h3, .package-card h3 {
+      color: #1E3A5F;
+      margin-top: 0;
+    }
+    .package-card .price {
+      color: #16324F;
+      font-size: 24px;
+      font-weight: bold;
+      margin: 8px 0 14px;
+    }
+    .package-card p, .service-card p {
+      line-height: 1.6;
+    }
+    .section-intro {
+      text-align: center;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .note {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #607D8B;
+      margin-top: 20px;
+    }
+    @media (max-width: 768px) {
+      header .container { text-align: center; }
+      nav { float: none; margin-top: 16px; }
+      nav ul li { margin: 0 8px; }
+      .hero { padding: 90px 20px; }
+      .hero h1 { font-size: 36px; }
+      .content-section { padding: 25px 18px; }
+      .content-section h2 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a class="logo" href="index.html">Emily's Trips</a>
+      <nav>
+        <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="mision.html">Misión</a></li>
+                    <li><a href="vision.html">Visión</a></li>
+                    <li><a href="contacto.html">Contáctanos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Nuestros servicios</h1>
+      <p>Encuentra opciones para organizar tu próximo viaje.</p>
+    </section>
+
+    <div class="container">
+      <section class="content-section">
+        <h2>¿Qué ofrecemos?</h2>
+        <p class="section-intro">
+          En Emily's Trips ofrecemos servicios turísticos y paquetes personalizados
+          para ayudar a organizar viajes nacionales e internacionales, tomando en cuenta
+          los gustos, necesidades y presupuesto de cada viajero.
+        </p>
+        <div class="services-grid">
+          <article class="service-card">
+            <h3>Transporte</h3>
+            <p>Opciones de vuelos, autobuses y traslados para facilitar el recorrido hacia el destino.</p>
+          </article>
+          <article class="service-card">
+            <h3>Hospedaje</h3>
+            <p>Orientación sobre hoteles y alojamientos turísticos de acuerdo con las necesidades del viaje.</p>
+          </article>
+          <article class="service-card">
+            <h3>Actividades y excursiones</h3>
+            <p>Recomendaciones de excursiones, visitas guiadas y experiencias para conocer cada destino.</p>
+          </article>
+          <article class="service-card">
+            <h3>Asesoría personalizada</h3>
+            <p>Apoyo para combinar servicios y elegir alternativas que se adapten a los intereses y presupuesto del cliente.</p>
+          </article>
+          <article class="service-card">
+            <h3>Paquetes turísticos</h3>
+            <p>Diseño de itinerarios y apoyo en la organización de viajes nacionales e internacionales.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2>Paquetes y destinos</h2>
+        <p class="section-intro">
+          Estos son algunos de los paquetes propuestos por Emily's Trips.
+        </p>
+        <div class="services-grid">
+          <article class="package-card">
+            <h3>Cancún</h3>
+            <p class="price">$1,500 MXN</p>
+            <p><strong>Sol y playa · 3 días y 2 noches</strong></p>
+            <p>Incluye un itinerario sugerido, orientación para reservar hospedaje y recomendaciones de actividades.</p>
+          </article>
+          <article class="package-card">
+            <h3>Guanajuato</h3>
+            <p class="price">$900 MXN</p>
+            <p><strong>Viaje cultural · 2 días y 1 noche</strong></p>
+            <p>Paquete con recomendaciones gastronómicas, recorrido sugerido y planeación de actividades culturales en San Miguel de Allende.</p>
+          </article>
+          <article class="package-card">
+            <h3>Canadá</h3>
+            <p class="price">$5,000 MXN</p>
+            <p>Tour por Toronto y las vistas de Niagara Falls, con algunos recorridos por carretera. El paquete es personalizable.</p>
+          </article>
+          <article class="package-card">
+            <h3>España</h3>
+            <p class="price">$12,000 MXN</p>
+            <p>Paquete de tour por destinos como Madrid, Barcelona, Alicante y Mallorca.</p>
+          </article>
+        </div>
+        <p class="note">
+          Los precios son los que aparecen en el portafolio escolar de Emily's Trips.
+          Antes de contratar, se deben confirmar con la agencia los servicios incluidos
+          y las condiciones de cada paquete.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Emily's Trips | Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
